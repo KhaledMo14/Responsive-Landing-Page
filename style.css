@@ -1,0 +1,363 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+}
+
+nav 
+{
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    background-color: white;
+    padding: 15px 0px;
+}
+.container
+{
+    width: 80%;
+    margin: auto;
+}
+
+nav .container 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .container img 
+{
+    margin-top: 5px;
+}
+
+nav ul 
+{
+    display: flex;
+   
+}
+
+li 
+{
+    list-style: none;
+    cursor: pointer;   
+}
+
+nav ul li 
+{
+    margin-left: 30px;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+ ul li:hover 
+{
+    color: #6daefd
+}
+
+
+/*-------------------------------*/
+
+.portfolio
+{ 
+    padding: 50px 0;
+}
+
+.pro-container
+{
+    background: linear-gradient(90deg, rgba(119,132,231,1) 0%, rgba(119,132,231,1) 22%, rgba(0,212,255,1) 84%);
+    padding: 100px;
+}
+
+.portfolio-text 
+{
+    text-align: center;
+    color: white;
+    
+}
+
+.portfolio-text span 
+{
+    font-size: .8rem;
+}
+
+.portfolio-text h2 
+{
+    font-size: 3rem;
+}
+
+
+.portfolio-text i 
+{
+    margin: 0px 15px;
+}
+
+/*************************/
+
+
+.projects
+{
+    padding: 100px 0px ;
+    
+}
+
+.project-text
+{
+    text-align: center;
+}
+
+.project-text h2 
+{
+    font-size: 2rem;
+}
+
+.project-text p 
+{
+    color: #bebebe;
+    font-size: .9rem;
+}
+
+.projects ul 
+{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px;
+} 
+
+.projects ul li 
+{
+    margin-left: 40px;
+}
+
+
+.items 
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    gap: 25px;
+   
+}
+
+.item h4
+{
+    padding-top: 20px;
+}
+
+.photo-container
+{
+    position: relative;
+    overflow: hidden;
+   
+}
+
+.photo-container img 
+{
+    width: 100%;
+}
+
+.photo-container::after 
+{
+    content: "\f1e5";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size:2rem;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(119, 132, 231, 0.764);
+    top: 100%;
+    transition: 2s;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+.cover i 
+{
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 2rem;
+}
+
+.item:hover .cover
+{
+    top:0;
+     
+}
+
+.item:hover  .photo-container::after  
+{
+    top: 0;
+}
+
+/********************************/
+
+.footer-nav 
+{
+    padding: 100px 0px;
+    background-color: #04091e;
+}
+
+.footer
+{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 25px;
+    color: white;
+
+}
+
+footer p 
+{
+    color: #bebebe;
+    font-size: 14px;
+    padding-top: 25px
+}
+
+.new-sletter input 
+{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    
+}
+
+.new-sletter p 
+{
+    padding-bottom: 15px;
+}
+
+
+::placeholder
+{
+   padding-left: 15px;
+}
+
+.sletter-form
+{
+    position: relative;
+
+}
+
+.btn
+{
+    position: absolute;
+    right: 0;
+    height: 40px ;
+    width: 50px;
+    background-color: #6daefd;
+    color: white;
+    border: none;
+   
+}
+
+.follow-me p 
+{
+    padding-bottom: 30px;
+}
+
+.follow-me ul 
+{
+    display: flex;
+}
+
+.follow-me ul li 
+{
+    margin: 5px;
+    
+  
+}
+
+
+@media (max-width: 600px) {
+    nav ul 
+    {
+        display: none;
+    }
+    nav a 
+    {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .project-text h2
+    {
+       font-size: 2rem; 
+    }
+
+    .project-text p
+    {
+       font-size: 1rem;
+       padding-top: 15px; 
+    }
+    
+    
+    
+    .items , .footer
+    {
+        grid-template-columns: 1fr
+    }
+}
+
+
+@media (min-width: 600px) and (max-width:765px)
+{
+    nav ul 
+    {
+        display: none;
+    }
+    nav a 
+    {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .project-text h2
+    {
+       font-size: 2rem; 
+    }
+
+    .project-text p
+    {
+       font-size: 1rem;
+       padding-top: 15px; 
+    }
+    
+    
+    
+    .items , .footer
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width:756px) and (max-width:1000px){
+    nav ul 
+    {
+        display: none;
+    }
+    nav a 
+    {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+}
